@@ -1,3 +1,5 @@
+import { logout } from '../../features/authentication/service/authenticationService';
+
 export default function Menu() {
 
     return (
@@ -11,7 +13,7 @@ export default function Menu() {
                 <span className="megamenu-active"></span>
 
                 <button className="btn btn-ghost">
-                    <a href="/">
+                    <a href="/home">
                         Home
                     </a>
                 </button>
@@ -31,6 +33,15 @@ export default function Menu() {
                         <li><a href="/produto-form">Cadastrar</a></li>
                     </ul>
                 </div>
+
+                <button className="btn btn-ghost">
+                   <a
+                       href="/"
+                       onClick={logout}
+                   >
+                       Logout
+                   </a>
+               </button>
 
             </div>
 
